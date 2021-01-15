@@ -78,7 +78,7 @@ counter = coords[start[0]][start[1]]
 solution = ""
 
 # Starting at 'start', we move to the neighbor with the shortest path length until 'finish' is reached.
-while current != finish: # Writes a commands into 'solution'.
+while current != finish: # Writes commands into 'solution'.
     counter -= 1
     for xy in validNeighbors([current]):
         if coords[xy[0]][xy[1]] == counter:
