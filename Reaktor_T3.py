@@ -57,7 +57,7 @@ def validNeighbors(coordslist):
     return collect
 
 
-coords[finish[0]][finish[1]] = -2 # Finish is now denotes as -2 in the 'coords' matrix.
+coords[finish[0]][finish[1]] = -2 # Temporarily, the path length from finish to finish is set to -2. 
 
 # The length of shortest path to finish is evaluated and saved into coords for each safe coordinate. 
 current = [finish] 
@@ -77,7 +77,7 @@ counter = coords[start[0]][start[1]]
 
 solution = ""
 
-coords[finish[0]][finish[1]] = 0
+coords[finish[0]][finish[1]] = 0 # Sets path length back to zero. 
 
 # Starting at 'start', we move to the neighbor with the shortest path length until 'finish' is reached.
 while current != finish: # Writes commands into 'solution'.
